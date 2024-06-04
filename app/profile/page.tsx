@@ -38,7 +38,9 @@ export default async function ProtectedPage() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <div className="grid gap-1 text-center">
-              <h2 className="text-2xl font-bold">Jared Palmer</h2>
+              <h2 className="text-2xl font-bold">
+                {user.user_metadata.toString()}
+              </h2>
               <p className="text-gray-500 dark:text-gray-400">{user.email}</p>
             </div>
             <Badge
