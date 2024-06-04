@@ -44,11 +44,15 @@ export default function Login({
       },
     });
 
+    console.log({ error: error?.message });
+
     if (error) {
-      return redirect("/login?message=Could not authenticate user");
+      return redirect(
+        `/login?message=${error?.message ?? "Could not authenticate user"}`,
+      );
     }
 
-    return redirect("/login?message=Check email to continue sign in process");
+    return redirect("/profile");
   };
 
   return (
