@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+// const defaultUrl = process.env.VERCEL_URL
+//   ? `https://${process.env.VERCEL_URL}`
+//   : "http://localhost:3000";
+
+const defaultUrl = "https://toursy.vercel.app";
 
 function GoogleLogin() {
   const googleSignIn = async () => {
